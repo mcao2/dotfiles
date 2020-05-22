@@ -19,8 +19,6 @@
     ~/.vim:
     ~/.vimrc:
 
-- create:
-  - ~/.vim/undo-history
 
 - shell:
   - git submodule sync --recursive
