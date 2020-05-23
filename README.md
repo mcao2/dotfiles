@@ -1,4 +1,4 @@
-# Dotfiles [[![Build Status](https://travis-ci.com/mcao2/dotfiles.svg?branch=master)](https://travis-ci.com/anishathalye/dotfiles)]
+# Dotfiles [[![Build Status](https://travis-ci.com/mcao2/configs.svg?branch=master)](https://travis-ci.com/anishathalye/dotfiles)]
 
 After cloning this repo, run `install` to automatically set up the development
 environment. Note that the install script is idempotent: it can safely be run
