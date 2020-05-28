@@ -18,6 +18,7 @@
     ~/.screenrc:
     ~/.vim:
     ~/.vimrc:
+    ~/.tmux.conf:
 
 
 - shell:
