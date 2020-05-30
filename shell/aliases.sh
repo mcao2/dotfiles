@@ -2,6 +2,10 @@
 alias ls='ls --color=auto'
 alias grep='grep --color'
 
+# git alias
+alias gits='git status'
+alias gitm='git commit -m '
+
 # ls aliases
 alias ll='ls -lah'
 alias la='ls -A'
@@ -12,51 +16,51 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # git related aliases
-alias gag='git exec ag'
+# alias gag='git exec ag'
 
 # Update dotfiles
-dfu() {
-    (
-        cd ~/.dotfiles && git pull --ff-only && ./install -q
-    )
-}
+# dfu() {
+#     (
+#         cd ~/.dotfiles && git pull --ff-only && ./install -q
+#     )
+# }
 
 # Use pip without requiring virtualenv
-syspip() {
-    PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-
-syspip2() {
-    PIP_REQUIRE_VIRTUALENV="" pip2 "$@"
-}
-
-syspip3() {
-    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
-}
+# syspip() {
+#     PIP_REQUIRE_VIRTUALENV="" pip "$@"
+# }
+# 
+# syspip2() {
+#     PIP_REQUIRE_VIRTUALENV="" pip2 "$@"
+# }
+# 
+# syspip3() {
+#     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+# }
 
 # cd to git root directory
-alias cdgr='cd "$(git root)"'
+# alias cdgr='cd "$(git root)"'
 
 # Create a directory and cd into it
-mcd() {
+mkcd() {
     mkdir "${1}" && cd "${1}"
 }
 
 # Jump to directory containing file
-jump() {
-    cd "$(dirname ${1})"
-}
+# jump() {
+#     cd "$(dirname ${1})"
+# }
 
 # cd replacement for screen to track cwd (like tmux)
-scr_cd()
-{
-    builtin cd $1
-    screen -X chdir "$PWD"
-}
+# scr_cd()
+# {
+#     builtin cd $1
+#     screen -X chdir "$PWD"
+# }
 
-if [[ -n $STY ]]; then
-    alias cd=scr_cd
-fi
+# if [[ -n $STY ]]; then
+#     alias cd=scr_cd
+# fi
 
 # Go up [n] directories
 up()
@@ -82,11 +86,11 @@ up()
 }
 
 # Execute a command in a specific directory
-xin() {
-    (
-        cd "${1}" && shift && ${@}
-    )
-}
+# xin() {
+#     (
+#         cd "${1}" && shift && ${@}
+#     )
+# }
 
 # Check if a file contains non-ascii characters
 nonascii() {
@@ -94,40 +98,40 @@ nonascii() {
 }
 
 # Fetch pull request
-
-fpr() {
-    if ! git rev-parse --git-dir > /dev/null 2>&1; then
-        echo "error: fpr must be executed from within a git repository"
-        return 1
-    fi
-    (
-        cdgr
-        if [ "$#" -eq 1 ]; then
-            local repo="${PWD##*/}"
-            local user="${1%%:*}"
-            local branch="${1#*:}"
-        elif [ "$#" -eq 2 ]; then
-            local repo="${PWD##*/}"
-            local user="${1}"
-            local branch="${2}"
-        elif [ "$#" -eq 3 ]; then
-            local repo="${1}"
-            local user="${2}"
-            local branch="${3}"
-        else
-            echo "Usage: fpr [repo] username branch"
-            return 1
-        fi
-
-        git fetch "git@github.com:${user}/${repo}" "${branch}:${user}/${branch}"
-    )
-}
+# 
+# fpr() {
+#     if ! git rev-parse --git-dir > /dev/null 2>&1; then
+#         echo "error: fpr must be executed from within a git repository"
+#         return 1
+#     fi
+#     (
+#         cdgr
+#         if [ "$#" -eq 1 ]; then
+#             local repo="${PWD##*/}"
+#             local user="${1%%:*}"
+#             local branch="${1#*:}"
+#         elif [ "$#" -eq 2 ]; then
+#             local repo="${PWD##*/}"
+#             local user="${1}"
+#             local branch="${2}"
+#         elif [ "$#" -eq 3 ]; then
+#             local repo="${1}"
+#             local user="${2}"
+#             local branch="${3}"
+#         else
+#             echo "Usage: fpr [repo] username branch"
+#             return 1
+#         fi
+# 
+#         git fetch "git@github.com:${user}/${repo}" "${branch}:${user}/${branch}"
+#     )
+# }
 
 # Serve current directory
 
-serve() {
-    ruby -run -e httpd . -p "${1:-8080}"
-}
+# serve() {
+#     ruby -run -e httpd . -p "${1:-8080}"
+# }
 
 # Mirror a website
 alias mirrorsite='wget -m -k -K -E -e robots=off'
