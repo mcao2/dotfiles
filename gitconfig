@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-name = mcao2
-email = mcao2@andrew.cmu.edu
+name = mengxin.cao
+email = mengxin.cao@tusimple.ai
 
 [core]
 excludesfile = ~/.gitignore_global
@@ -21,5 +21,7 @@ lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold b
 lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
 
 [credential]
-helper = store
+	helper = "!f() { /home/mengxin.cao/.vscode-server/bin/485c41f9460bdb830c4da12c102daff275415b53/node /tmp/vscode-remote-containers-e8db6b9f4b92e080ca71e08ac05b6f1eacae058a.js $*; }; f"
 
+[push]
+	default = simple
