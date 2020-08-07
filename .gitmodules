@@ -232,3 +232,6 @@
 [submodule "emacs.d/vendor/evil-surround"]
 	path = emacs.d/vendor/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
+[submodule "zsh/plugins/zsh-autosuggestions"]
+	path = zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
