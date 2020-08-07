@@ -28,17 +28,20 @@ mkdir tmux_temp_installation_dir
 cd tmux_temp_installation_dir
 pwd
 
-echo "Please visit http://libevent.org/ and copy the latest stable version's .tar.gz url"
-echo "Paste URL"
-read libeventurl
+# echo "Please visit http://libevent.org/ and copy the latest stable version's .tar.gz url"
+# echo "Paste URL"
+# read libeventurl
+libeventurl="https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz"
 
-echo "Please visit http://invisible-island.net/ncurses/ and copy the latest stable version's .tar.gz url"
-echo "Paste URL"
-read ncursesurl
+# echo "Please visit http://invisible-island.net/ncurses/ and copy the latest stable version's .tar.gz url"
+# echo "Paste URL"
+# read ncursesurl
+ncursesurl="https://invisible-island.net/datafiles/release/ncurses.tar.gz"
 
-echo "Please visit https://github.com/tmux/tmux/releases and copy the latest stable version's .tar.gz url"
-echo Paste URL
-read tmuxurl
+# echo "Please visit https://github.com/tmux/tmux/releases and copy the latest stable version's .tar.gz url"
+# echo Paste URL
+# read tmuxurl
+tmuxurl="https://github.com/tmux/tmux/releases/download/3.1b/tmux-3.1b.tar.gz"
 
 echo "Installing tmux into your ~/.local/bin/tmux"
 
