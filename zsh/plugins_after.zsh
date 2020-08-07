@@ -37,4 +37,4 @@ if [[ "$(tput colors)" == "256" ]]; then
 fi
 
 # Zsh autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
