@@ -10,6 +10,7 @@
     ~/.zsh:
     ~/.zshrc:
     ~/.gitconfig:
+    ~/.gitignore_global:
     ~/.vim:
     ~/.vimrc:
     ~/.tmux.conf:
