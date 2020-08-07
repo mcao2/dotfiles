@@ -6,10 +6,9 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.dotfiles: ''
     ~/.shell:
-    ~/.bash:
-    ~/.bashrc:
+    ~/.zsh:
+    ~/.zshrc:
     ~/.gitconfig:
     ~/.vim:
     ~/.vimrc:
