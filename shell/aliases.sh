@@ -5,6 +5,7 @@ alias grep='grep --color'
 # git alias
 alias gits='git status'
 alias gitm='git commit -m '
+alias gitp='git push '
 
 # ls aliases
 alias ll='ls -lahrt'
