@@ -85,4 +85,4 @@ installPackage tmux.tar.gz
 
 
 echo "Append following line to your .zshrc or .bashrc or .bash_profile file"
-echo export PATH="$HOME/local/bin:$PATH"
+echo export PATH="$HOME/local/bin:\$PATH"
