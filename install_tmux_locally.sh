@@ -35,6 +35,7 @@ sudo apt-get install git make build-essential
 #
 # 5. `export PATH="$HOME/local/bin:$PATH"` into your bashrc file
 
+curr_path=$(pwd)
 rm -rf tmux_temp_installation_dir 2> /dev/null
 mkdir tmux_temp_installation_dir
 cd tmux_temp_installation_dir
@@ -83,6 +84,8 @@ installPackage ncurses.tar.gz
 echo "Installing tmux..."
 installPackage tmux.tar.gz
 
+cd $curr_path
+rm -rf tmux_temp_installation_dir 2> /dev/null
 
 echo "Append following line to your .zshrc or .bashrc or .bash_profile file"
 echo export PATH="$HOME/local/bin:\$PATH"
