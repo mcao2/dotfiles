@@ -9,7 +9,7 @@ else
 fi
 
 # Install dependencies
-sudo apt-get install git make build-essential
+sudo apt-get install git make build-essential libssl-dev
 
 # Installing tmux locally
 
@@ -85,7 +85,6 @@ echo "Installing tmux..."
 installPackage tmux.tar.gz
 
 cd $curr_path
-rm -rf tmux_temp_installation_dir 2> /dev/null
 
 echo "Append following line to your .zshrc or .bashrc or .bash_profile file"
 echo export PATH="$HOME/local/bin:\$PATH"
