@@ -16,5 +16,5 @@
     ~/.tmux.conf:
 
 - shell:
-    - [. install_tmux_locally.sh, Installing tmux]
+    - [./install_tmux_locally.sh, Installing tmux]
     - [git submodule update --init --recursive, Installing submodules]
