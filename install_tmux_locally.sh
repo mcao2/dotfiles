@@ -1,4 +1,16 @@
 #!/bin/bash
+
+# Check if tmux already installed
+if [ $(tmux -V | grep "tmux 3.*" | wc -l) -gt 0 ]; then
+    echo "$(tmux -V) already installed"
+    exit 0
+else
+    echo "tmux version smaller than 3"
+fi
+
+# Install dependencies
+sudo apt-get install git make build-essential
+
 # Installing tmux locally
 
 # 1. visit: https://github.com/tmux/tmux
