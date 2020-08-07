@@ -83,6 +83,7 @@ installPackage ncurses.tar.gz
 echo "Installing tmux..."
 installPackage tmux.tar.gz
 
+rm -rf temp_tmux_install_lib_dir 2> /dev/null
 
 echo "Append following line to your .zshrc or .bashrc or .bash_profile file"
 echo export PATH="$HOME/local/bin:\$PATH"
