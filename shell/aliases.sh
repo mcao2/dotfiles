@@ -7,8 +7,7 @@ alias gits='git status'
 alias gitm='git commit -m '
 
 # ls aliases
-alias ll='ls -lah'
-alias la='ls -A'
+alias ll='ls -lahrt'
 alias l='ls'
 
 # Aliases to protect against overwriting
@@ -138,3 +137,14 @@ alias mirrorsite='wget -m -k -K -E -e robots=off'
 
 # Mirror stdout to stderr, useful for seeing data going through a pipe
 alias peek='tee >(cat 1>&2)'
+
+# Config setups
+alias zshconfig="vi ~/.zshrc"
+alias zshupdate="source ~/.zshrc"
+alias sshconfig="vi ~/.ssh/config"
+
+# Get ip info
+alias ip="curl ipinfo.io"
+
+# Update shell
+alias freshell='exec -l $SHELL'
