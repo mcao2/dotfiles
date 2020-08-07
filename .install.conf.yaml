@@ -16,4 +16,6 @@
     ~/.tmux.conf:
 
 - shell:
+    - [sudo apt-get install git make build-essential, Install dependencies]
+    - [. install_tmux_locally.sh, Install tmux]
     - [git submodule update --init --recursive, Installing submodules]
