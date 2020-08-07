@@ -9,7 +9,7 @@ else
 fi
 
 # Install dependencies
-sudo apt-get install git make build-essential libssl-dev libevent ncurses
+sudo apt-get install git make build-essential libssl-dev libevent-dev ncurses-dev
 
 # Installing tmux locally
 
