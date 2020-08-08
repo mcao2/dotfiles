@@ -145,7 +145,7 @@ alias zshupdate="source ~/.zshrc"
 alias sshconfig="vi ~/.ssh/config"
 
 # Get ip info
-alias ip="curl ipinfo.io"
+alias myip="curl ipinfo.io"
 
 # Update shell
 alias freshell='exec -l $SHELL'
