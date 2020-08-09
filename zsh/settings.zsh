@@ -47,6 +47,3 @@ bindkey "^R" history-incremental-search-backward
 
 # Disable shell builtins
 disable r
-
-# Include the local executables like tmux
-export PATH="$HOME/local/bin:$PATH"

@@ -23,14 +23,14 @@ pwd
 # read tmuxurl
 tmuxurl="https://github.com/tmux/tmux/releases/download/3.1b/tmux-3.1b.tar.gz"
 
-echo "Installing tmux into your ~/local/bin/tmux"
+echo "Installing tmux into your ~/.local/bin/tmux"
 
 wget $tmuxurl -O tmux.tar.gz
 
 rm -rf tmux_install && mkdir tmux_install
 tar -zxf tmux.tar.gz -C tmux_install --strip-components=1
 cd tmux_install
-PKG_CONFIG_PATH=$HOME/local/lib/pkgconfig ./configure --prefix=$HOME/local
+PKG_CONFIG_PATH=$HOME/.local/lib/pkgconfig ./configure --prefix=$HOME/.local
 make && make install
 cd .. && rm -rf tmux_install
 
