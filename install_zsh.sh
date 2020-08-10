@@ -7,3 +7,5 @@ else
     echo "zsh not installed"
     sudo apt-get update && sudo apt-get install -y zsh
 fi
+
+echo "Run chsh -s \$(which zsh) to make zsh the default shell"
