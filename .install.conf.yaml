@@ -18,6 +18,7 @@
 
 - shell:
     - command: ./install_zsh.sh
+      stdin: true
       stdout: true
       description: Installing zsh
     - command: ./install_tmux_locally.sh
