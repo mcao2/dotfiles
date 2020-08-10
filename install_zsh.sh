@@ -7,12 +7,3 @@ else
     echo "zsh not installed"
     sudo apt-get update && sudo apt-get install -y zsh
 fi
-
-if [ $(echo $SHELL | grep "zsh" | wc -l) -gt 0 ]; then
-    echo "zsh already default shell"
-else
-    chsh -s $(which zsh)
-    exec -l $SHELL
-fi
-
-echo "Your shell is: $SHELL"
