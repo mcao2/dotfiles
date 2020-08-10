@@ -1,20 +1,18 @@
 #!/bin/bash
 
 # Check if zsh already installed
-if [ $(echo $SHELL | grep "zsh" | wc -l) -gt 0 ]; then
+if [ $(which zsh | wc -l) -gt 0 ]; then
     echo "zsh already installed"
-    exit 0
 else
     echo "zsh not installed"
+    sudo apt-get update && sudo apt-get install -y zsh
 fi
 
-sudo apt-get update
-
-sudo apt-get install -y zsh
-
-chsh -s $(which zsh)
-
-exec -l $SHELL
+if [ $(echo $SHELL | grep "zsh" | wc -l) -gt 0 ]; then
+    echo "zsh already default shell"
+else
+    chsh -s $(which zsh)
+    exec -l $SHELL
+fi
 
 echo "Your shell is: $SHELL"
- 
