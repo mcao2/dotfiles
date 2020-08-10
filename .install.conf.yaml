@@ -9,6 +9,7 @@
     ~/.shell:
     ~/.zsh:
     ~/.zshrc:
+    ~/.curlrc:
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.vim:
