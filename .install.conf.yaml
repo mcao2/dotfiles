@@ -17,6 +17,9 @@
     ~/.tmux.conf:
 
 - shell:
+    - command: ./install_zsh.sh
+      stdout: true
+      description: Installing zsh
     - command: ./install_tmux_locally.sh
       stdout: true
       description: Installing tmux
