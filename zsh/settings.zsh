@@ -18,9 +18,9 @@ setopt interactivecomments
 HISTSIZE=1048576
 HISTFILE="$HOME/.zsh_history"
 SAVEHIST=$HISTSIZE
-setopt appendhistory
-setopt incappendhistory
-setopt extendedhistory
+setopt appendhistory # history of each shell is appended to the master history file as the shell exits
+setopt incappendhistory # master history file is updated each time a line is executed in any shell, instead of waiting until that shell exits
+setopt extendedhistory # save each command’s beginning timestamp (in seconds since the epoch) and the duration (in seconds) to the history file
 
 # Time to wait for additional characters in a sequence
 KEYTIMEOUT=1 # corresponds to 10ms
