@@ -6,9 +6,6 @@
 - clean: ["~", "~/.config"]
 
 - link:
-    ~/.shell:
-    ~/.zsh:
-    ~/.zshrc:
     ~/.curlrc:
     ~/.gitconfig:
     ~/.gitignore_global:
@@ -17,8 +14,4 @@
     ~/.tmux.conf:
 
 - shell:
-    - [./install_zsh.sh, Installing zsh]
-    - command: ./install_tmux_locally.sh
-      stdout: true
-      description: Installing tmux
     - [git submodule update --init --recursive, Installing submodules]
