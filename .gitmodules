@@ -232,3 +232,7 @@
 [submodule "emacs.d/vendor/evil-surround"]
 	path = emacs.d/vendor/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty

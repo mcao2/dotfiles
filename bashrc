@@ -40,3 +40,5 @@ if [ -f ~/.bashrc_local_after ]; then
 fi
 
 eval $(cd && .tspkg/bin/tsp --env)
+export PATH=~/.local/bin:$PATH
+
